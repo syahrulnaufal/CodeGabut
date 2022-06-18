@@ -70,13 +70,28 @@
 </head>
 <body>
 	<section id="box">
-		<h1>HALO</h1>
+		<h1>Selamat Datang Di Websiteku</h1>
 		<div class="wave w-1"></div>
 		<div class="wave w-2"></div>
 		<div class="wave w-3"></div>
 		<div class="wave w-4"></div>
 	</section>
+<script>//=================================== Script untuk animasi di Judul website ini ====================================================
+	
+	const text= document.getElementById("text");	//mengambil element h1 (element yang akan diberi animasi)
+	const input = text.innerHTML;			//memasukan text awal di h1 ke variabel, karena nantinya text di h1 akan di hapus
+	const panjangtxt = input.length;		//variabel untuk panjang text tadi
+	let delay = 100;				//delay (semakin besar nilai variavel ini, animasi akan berjalan semakin lambat)
+	let i = 1;					//variabel untuk fungsi slice akan mengambil dari mana sampai mana
 
+	text.innerHTML = input.slice(0,1);		//mengganti text default di h1 menjadi hanya karakter pertamanya saja
+
+	var interval = setInterval(function(){		//interval untuk mengetikan teks dari karakter pertama sampai karakter akhir
+		text.innerHTML = input.slice(0, i);
+		i++;
+	},delay);
+
+</script>
 </body>
 
 </html>
